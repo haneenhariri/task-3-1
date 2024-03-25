@@ -1,0 +1,375 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+/* start styling header   */
+header
+{
+    position: relative;
+    height: 100vh;
+    background: url(../img/fotter.svg) no-repeat bottom;
+}
+/* nav bar start  */
+.nav-bar
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow:1px 1px 3px gainsboro;
+}
+.nav-bar .search-input
+{
+    margin-right: 100px;
+    padding: 10px;
+    display: flex;
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+/* hover  */
+.nav-bar .search-input:hover
+{
+    border: 1px solid #ff8500;
+}
+.nav-bar .search-input input
+{
+    background: none;
+    width: 100px;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+/* focus for search input */
+.nav-bar .search-input input:focus::-webkit-input-placeholder
+{
+  opacity: 0; 
+}
+.nav-bar .search-input ::placeholder
+{
+    color: #000;
+    font-size: larger;
+}
+.nav-bar ul li
+{
+    display: inline-block;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0 20px;
+}
+.nav-bar ul li:hover
+{
+    border: 1px solid #ff8500;
+    border-radius: 20px;
+}
+.nav-bar .itme
+{
+    text-decoration: none;
+    padding: 10px 30px;
+    color: #000;
+}
+/* end nav bar  */
+/* hero section */
+.hero
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+    margin:0 200px;
+    position: absolute;
+}
+.hero .header-title
+{
+    width: 50%;
+}
+.hero .header-title h1
+{
+    margin-bottom: 30px;
+}
+.hero .header-title span
+{
+    color: #ff8500;
+}
+.hero.header-title p
+{
+    font-weight: 200;
+}
+.hero .header-title button
+{
+    margin-top: 80px;
+    background-color: #ff8500;
+    color: #fff;
+    border: #ff8500;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size:medium;
+    cursor: pointer;
+}
+/* hover */
+.hero .header-title button:hover
+{
+    border: 1px solid #ff8500;
+    color: #000;
+    background-color: #fff;
+}
+.hero.img
+{
+    width: 50%;
+    padding: 10px;
+}
+.hero .img img
+{
+    height: 100%;
+    width: 100%;
+    animation-name: x;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes x 
+{
+    0%
+    {
+        translate: 0 0;
+    }
+    25%
+    {
+        translate: 0 3px;
+    }
+    50%
+    {
+        translate: 0 0;
+    }
+    75%
+    {
+        translate: 0 -3px;
+    }
+}
+/* end hero + header section done  */
+/* main style */
+/* section 1 */
+.container
+{
+    margin: 20px 100px;
+}
+.web
+{   
+    padding: 50px 0;
+}
+.container .title-web{
+    padding: 0 100px;
+}
+.container .title-web h2
+{
+    color: #ff8500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.container .title-web p
+{
+    margin-top: 20px;   
+}
+.per
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.per .sub-div
+{   position: relative;
+    height: 250px;
+    width: 300px;
+    display: flex;
+    padding: 40px;
+    margin: 40px 10px;
+    border: 1px solid gainsboro;
+    border-radius: 30px;
+    box-shadow: 1px 1px 5px #ff8500;
+    overflow: hidden;
+}
+.per .sub-div .list-text p{
+   padding:8px 15px ;
+}
+.per .sub-div img
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+}
+/* end section 1 */
+/* start section 2 */
+.team{
+    background-color: #ff8500;
+    height: 450px;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 150px;
+    
+}
+.team h2
+{
+    font-size: 40px;
+}
+/* start styling card team  */
+.team .cards{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.team .cards .card
+{
+    width: 250px;
+    height: 300px;
+    background-color: #fff;
+    margin: 50px 10px;
+    color: #000;
+    border-radius: 15px;
+/*     padding: 120px 0; */
+    text-align: center;
+    box-shadow: 1px 1px 5px black;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+.team .cards .card .face
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform:.5s;
+    border-radius: 15px;
+}
+.team .cards .card .face img
+{
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    right: 0;
+}
+.team .cards .card .front
+{
+    
+    transform: perspective(600px) rotateY(0deg);
+}
+.team .cards .card .back
+{
+    box-shadow: 1px 1px 5px white;
+    transform:rotateY(180deg);
+    background: #000;
+    color: #fff;
+}
+.card:hover{
+    cursor: pointer;
+    transform:  rotateY(180deg);
+}
+.card:hover .back{
+    
+    transform: perspective(600px) rotateY(180deg);
+}
+.team .cards .card h3
+{
+    margin-bottom: 10px;
+    color: #ff8500;
+}
+.team .cards .card p{
+    margin: 10px;
+}
+.team .cards .card a i 
+{
+    width: 40px;
+    color: white;
+}
+/* end section 2 */
+/* section 3 styling */
+.request
+{
+    background-color: #ff8500;
+    height: 450px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.request .email h2
+{
+    margin-bottom: 30px;
+    font-size: 30px;
+    
+}
+.request .email input
+{
+    background: none;
+    border: none;
+    padding: 4px;
+    border-bottom: 1px solid #fff;
+    outline: none;
+}
+.request .email input::placeholder
+{
+    color: #fff;
+}
+.request .email button 
+{
+    border: none;
+    background-color: #fff;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 40px;
+    color: #ff8500;
+}
+/* end section 3 */
+/* start footer  */
+footer
+{
+    height: 130px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 40px;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    padding: 100px;
+}
+footer >img
+{
+    position: absolute;
+    top: 8px;
+    left: 0;
+    padding-left: 80px;
+}
+footer div
+{
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer a 
+{
+    color: #fff;
+    text-decoration: none;
+}
+/* end  */
